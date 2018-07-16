@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
+import Library from './library/library';
+import Schedule from './schedule/schedule';
+
 class Home extends Component {
   render() {
     return (
-      <div>
-        <h1>Course Scheduler</h1>
+      <div className='home'>
+        <Library/>
+        <Schedule/>
       </div>
     );
   }
