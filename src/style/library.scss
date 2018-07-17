@@ -6,28 +6,31 @@
     grid-row-gap: 22px;
 
     &__title {
-        // grid-row: title-s/title-e;
+        grid-row: title-s/title-e;
+    }
+
+    &_course{
+      grid-row: courses-s/courses-e;
     }
 }
 
-.library-course{
+.library-course {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: [title-s] 100px [title-e courses-s] repeat(autofit, 1fr) [courses-e];
-  background-color: cornflowerblue;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  background: cornflowerblue;
 
-  &_title-arrow{
+  &_title-check {
+    grid-row: 1/2;
+    display: flex;
+  }
+  &_arrow {
     grid-row: 1/2;
   }
-
-  &_icon {
-          grid-row: 1/2;
-      }
-  &_arrow {
-          grid-row: 1/2;
-      }
-
-  &_description{
+  &_action {
+    grid-row: 1/2;
+  }
+  &_description {
     grid-row: 2/3;
   }
 }
