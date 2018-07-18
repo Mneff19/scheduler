@@ -9,7 +9,7 @@ class ProgressTracker extends Component {
     render() {
         return (
             <div className="progress-tracker">
-                <label className="progress-tracker_label">Progress Tracker</label>
+                <div className="progress-tracker_label">Progress Tracker</div>
                 <div className="progress-tracker_percentage">
                     {this.calculateProgress()}%
                 </div>

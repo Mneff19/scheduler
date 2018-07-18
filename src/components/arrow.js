@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 
 class Arrow extends Component {
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      status: false
-    }
-  }
-
   toggleArrow = function() {
     {/*if(this.state.status) {
       //closes it
@@ -21,7 +13,7 @@ class Arrow extends Component {
 */}
     document.getElementById(`${this.props.id}`).classList.toggle('arrow-closed');
 
-    this.setState({ status: !this.state.status })
+    this.props.callback();
   }.bind(this);
 
   render() {

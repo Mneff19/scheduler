@@ -11,7 +11,12 @@ class Action extends Component {
 
     handleAction = function() {
         this.props.onClick()
-            document.getElementById(`${this.id}`).classList.toggle('action-remove');
+        if(!this.status) {
+            document.getElementById(this.id).classList.add('action-remove');
+        } else {
+            document.getElementById(this.id).classList.remove('action-remove');
+        }
+        this.status = !this.status;
     }.bind(this);
 
     render() {
